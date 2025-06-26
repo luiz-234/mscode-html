@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja do Robin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 70px;
+    }
+
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #b30000;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      padding: 14px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+
+    #backToTop:hover {
+      background-color: #800000;
+      transform: scale(1.1);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .table img {
+      width: 80px;
+      height: auto;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-dark text-white text-center py-4">
+    <h1 class="fade-in">Loja do Robin</h1>
+  </header>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Robin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categorias">Categorias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section id="inicio" class="fade-in">
+      <form id="searchForm" class="mb-4" role="search">
+        <div class="mb-3">
+          <label for="busca" class="form-label">Buscar:</label>
+          <input type="text" class="form-control" id="busca" placeholder="Digite o que procura">
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+      </form>
+      <img src="https://i.pinimg.com/736x/70/ae/a0/70aea03bad0417e8bff62091d2cf321d.jpg" alt="Banner Loja do Robin" class="img-fluid rounded mb-4 shadow">
+    </section>
+
+    <section id="categorias" class="fade-in mb-4">
+      <h2 class="text-center">Categorias</h2>
+      <div class="d-flex justify-content-center flex-wrap gap-3">
+        <a href="#" class="btn btn-outline-primary">Roupas</a>
+        <a href="#" class="btn btn-outline-primary">Elementos</a>
+        <a href="#" class="btn btn-outline-primary">Livros</a>
+        <a href="#" class="btn btn-outline-primary">Acessórios</a>
+      </div>
+    </section>
+
+    <section id="produtos" class="fade-in mb-4">
+      <h3 class="text-center">Produtos</h3>
+      <table class="table table-bordered table-hover">
+        <thead class="table-danger text-center">
+          <tr>
+            <th>Nome</th>
+            <th>Valor</th>
+            <th>Imagem</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Batarang</td>
+            <td>R$ 50,00</td>
+            <td><img src="https://img1.yeggi.com/page_images_cache/2095994_robins-batarang-by-techoutreach" alt="Batarang"></td>
+          </tr>
+          <tr>
+            <td>Katana</td>
+            <td>R$ 75,00</td>
+            <td><img src="https://cdn.awsli.com.br/200x200/2515/2515067/produto/18367172031eb1d5259.jpg" alt="Katana"></td>
+          </tr>
+          <tr>
+            <td>Jogo</td>
+            <td>R$ 99,90</td>
+            <td><img src="https://pm1.aminoapps.com/6748/b51958525d592377a41ac56c5c400796bf5e111bv2_hq.jpg" alt="Jogo do Robin"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contato" class="fade-in mb-4">
+      <h4 class="text-center">Fale com Alfred</h4>
+      <form id="formContato" class="border p-4 rounded shadow bg-light">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome:</label>
+          <input type="text" class="form-control" id="nome" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail:</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="assunto" class="form-label">Assunto:</label>
+          <input type="text" class="form-control" id="assunto" required>
+        </div>
+        <div class="mb-3">
+          <label for="mensagem" class="form-label">Mensagem:</label>
+          <textarea id="mensagem" class="form-control" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </section>
+
+    <section class="fade-in mb-4">
+      <h2 class="text-center">Redes de Comunicação</h2>
+      <ul class="list-unstyled text-center">
+        <li><a href="#">Jornal de Gotham</a></li>
+        <li><a href="#">Cassino do Pinguim</a></li>
+        <li><a href="#">Tecnologia dos Wayne</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 Fã Clube do Robin. Todos os direitos reservados.</p>
+  </footer>
+
+  <button id="backToTop" aria-label="Voltar ao topo">&#8679;</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const fadeElements = document.querySelectorAll(".fade-in");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.2 });
+
+    fadeElements.forEach(el => observer.observe(el));
+
+    const nav = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      document.getElementById("backToTop").style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    document.getElementById("backToTop").addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    document.getElementById("searchForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const termo = document.getElementById("busca").value.trim();
+      if (termo) alert(`Você buscou por: ${termo}`);
+    });
+
+    document.getElementById("formContato").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Mensagem enviada com sucesso para nosso mordomo Alfred!");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
